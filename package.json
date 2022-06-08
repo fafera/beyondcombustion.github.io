@@ -1,0 +1,27 @@
+{
+  "name": "beyondcombustion",
+  "version": "1.0.0",
+  "description": "\"BeyondCombustion NPM\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fafera/The-Consensus.git"
+  },
+  "keywords": [
+    "combustion",
+    "vaporizers"
+  ],
+  "author": "Fafa Capellari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fafera/The-Consensus/issues"
+  },
+  "homepage": "https://github.com/fafera/The-Consensus#readme",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "fs": "^0.0.1-security"
+  }
+}

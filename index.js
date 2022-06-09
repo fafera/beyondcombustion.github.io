@@ -21,7 +21,7 @@ window.onload = function() {
             categories: getCategories(element),
         };
     });
-    console.log(vapeList);
+    //console.log(vapeList);
     function getTitle(element) {
         var title = element.substring(
             element.indexOf("-") +2, 
@@ -55,11 +55,24 @@ window.onload = function() {
     function generateTable() {
         var table = '';
         vapeList.forEach(element => {
-            console.log(element.title);
-            
+            if(element.title) {
+                table += "<tr>" +
+                        "<td>"+element.title+"</td>" +
+                        "<td>"+element.categories+"</td>" +
+                    "</tr>";
+                }
         });
+        return table;
     }
-    //generateTable();
-    var table = document.getElementById('vape-table');
-    table.outerHTML = vapeList;
+    var table = generateTable();
+    $("#vape-table").append(table);
+    //var htmlTable = document.getElementById('vape-table');
+    //htmlTable.append(table);
+    //htmlTable.outerHTML = table;
+    $("#vape-table").fancyTable({
+        sortColumn:0,
+        pagination: true,
+        perPage:50,
+        globalSearch:false
+    });
 }
